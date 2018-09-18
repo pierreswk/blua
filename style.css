@@ -404,6 +404,8 @@ img.shapeCta {
     width: 100vw;
 }
 
+/* FOOTER */
+
 footer {
     height: 100vh;
     width: 100vw;
@@ -414,25 +416,86 @@ footer {
     align-items: center;
     align-content: center;
 }
+/* FOOTER PART 1*/
 
 #foot1 {
     height: 80%;
     width: 23%;
-    background-color: white;
+    /* background-color: red;*/
+} 
 
+.list_footer{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Avenir-Book';
+    color: white;
+    font-size: 1.5em;
+    margin-left:5vw;
+    margin-top: 0;
+    padding-left: 20px;
 }
+
+.item_list{
+    margin-bottom: 20px;
+    transition: ease-in-out all 300ms;
+    cursor: pointer;
+}
+
+.logo_footer{
+    width:115px;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+}
+
+/* FOOTER PART 2*/
 
 #foot2 {
     height: 80%;
     width: 44%;
-    background-color: aqua;
+    
 }
+
+.partner{
+    width:80%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 5vw;  
+    justify-content: center;
+}
+
+.item1{
+    width: 150px;
+    height:100px;
+    background-color: #FF5B6D;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER PART 3*/
 
 #foot3 {
     height: 80%;
     width: 23%;
-    background-color: white;
+    /* background-color: white; */
 }
+
+.picto_footer{
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.titre_footer{
+    color: white;
+    margin-left:5Vw;
+    margin-bottom: 5vh;
+    
+}
+
+/*FOOTER RESPONSIVE */
 
 @media screen and (max-width: 768px) {
     footer {
@@ -440,22 +503,27 @@ footer {
         min-height: 100vh;
         flex-direction: column;
     }
-
     #foot1 {
         width: 80%;
         height: 23%;
+        display: flex;
     }
 
+    .list_footer{
+        margin: auto;
+    }
+
+    
     #foot2 {
         width: 80%;
         height: 44%;
     }
-
     #foot3 {
         width: 80%;
         height: 23%;
     }
 }
+
 
 /* COLOR */
 
