@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Blua | For the planet 🌎 </title>
+
+    <!-- OG PROTOCOL -->
+
+    <meta property="og:title" content="Blua, let's start caring about our planet" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.blua.com" />
+    <meta property="og:image" content="http://www.blua.com/img/og_img.png" />
+
+    <!-- FAV -->
+
+    <link rel="icon" type="image/png" href="img/blua_fav.png" />
+
+    <!-- JS -->
+
+    <script src="js/script.js"></script>
+
+    <style>
+        /* GLOBAL */
+
+        h1 {
+            font-family: 'Mikado';
+            color: white;
+            font-weight: 900;
+            font-size: 8vw;
+            letter-spacing: 1;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Mikado';
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+
+        p {
+            font-family: 'Avenir-Book';
+            color: #000;
+            font-size: 1em;
+            line-height: 1.8;
+        }
+
+        /* BURGER */
+
+        #Burger {
+            position: fixed;
+            z-index: 1001;
+        }
+
+        #BurgerDesktop {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: space-between;
+            width: 24px;
+            height: 24px;
+            margin-top: 40px;
+            margin-left: 40px;
+            position: relative;
+            z-index: 9999;
+            cursor: pointer;
+
+        }
+
+        #BurgerDesktop:hover~.trait {
+            background-color: #FDDB17;
+            cursor: pointer;
+        }
+
+        .trait {
+            width: 24px;
+            height: 4px;
+            background-color: white;
+        }
+
+        #Trait1,
+        #Trait2,
+        #Trait3 {
+            transition: all .2s ease;
+            transform-origin: 10% 50%;
+        }
+
+        /* MENU BURGER */
+
+        .menuBurger {
+            width: 100vw;
+            height: 100vh;
+            background-color: #280A56;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            margin-left: -100vw;
+            transition: all 0.5s ease-out;
+            display: flex;
+            flex-wrap: nowrap;
+            z-index: 1000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menuBurger {
+                flex-direction: column;
+                width: 100vw;
+            }
+
+            .menuProjets {
+                height: 65vh;
+                width: 100%;
+            }
+            .menuLinks {
+                height: 35vh;
+                width: 100%;
+            }
+
+        }
+
+        .menuProjets {
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .menuProjets ul {
+            list-style: none;
+        }
+
+        .menuProjets ul li {
+            margin-bottom: 5vh;
+
+        }
+
+        .menuProjets ul li a {
+            text-decoration: none;
+            font-family: 'Mikado';
+            color: white;
+            font-size: 6vh;
+            margin: auto 5vh;
+            transition: ease-in-out all 300ms;
+        }
+
+        .menuProjets ul li a:hover {
+            color: #FF5B6D;
+        }
+
+        .menuLinks {
+            background-color: rgb(23, 4, 51);
+            min-width: 480px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .menuLinks ul li a {
+            text-decoration: none;
+            font-family: 'Mikado';
+            color: white;
+            font-size: 4vh;
+            margin: auto 2vh;
+            transition: ease-in-out all 300ms;
+        }
+
+        .menuLinks ul {
+            list-style: none;
+            margin: auto;
+            text-align: center;
+        }
+
+        .menuLinks ul li {
+            margin-bottom: 5vh;
+        }
+
+        .menuLinks ul li a:hover {
+            color: #FF5B6D;
+        }
+
+        body {
+            width: 100vw;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .partOne {
+            width: 35%;
+            height: 80%;
+            background-color: white;
+        }
+
+        .partTwo {
+            width: 55%;
+            height: 80%;
+            background-color: aqua;
+        }
+
+        @media screen and (max-width: 768px) {
+            section {
+                flex-direction: column;
+            }
+            .partOne {
+                width: 80%;
+                height: 50%;
+                order: 1;
+            }
+
+            .partTwo {
+                width: 80%;
+                height: 50%;
+                order: 2;
+            }
+        }
+
+        header {
+            height: 100vh;
+            width: 100vw;
+            background-color: #FDDB17;
+        }
+
+        #space {
+            height: 100vh;
+            width: 100vw;
+            background-color: #1B123F;
+        }
+
+        #sky {
+            height: 100vh;
+            width: 100vw;
+            background-color: #4A9EDD;
+        }
+
+        #city {
+            height: 100vh;
+            width: 100vw;
+            background-color: #515151;
+        }
+
+        #forest {
+            height: 100vh;
+            width: 100vw;
+            background-color: #1BD968;
+        }
+
+        #beach {
+            height: 100vh;
+            width: 100vw;
+            background-color: #FFDB00;
+        }
+
+        #ocean {
+            height: 100vh;
+            width: 100vw;
+            background-color: #4A5BDD;
+        }
+
+        footer {
+            height: 100vh;
+            width: 100vw;
+            background-color: #280A56;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+        }
+
+        #foot1 {
+            height: 80%;
+            width: 23%;
+            background-color: white;
+
+        }
+
+        #foot2 {
+            height: 80%;
+            width: 44%;
+            background-color: aqua;
+        }
+
+        #foot3 {
+            height: 80%;
+            width: 23%;
+            background-color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer {
+                height: auto;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            #foot1 {
+                width: 80%;
+                height: 23%;
+            }
+
+            #foot2 {
+                width: 80%;
+                height: 44%;
+            }
+
+            #foot3 {
+                width: 80%;
+                height: 23%;
+            }
+        }
+    </style>
+
+</head>
+
+<body onscroll="changeCouleurOnScroll()" onload="getPositions()" onresize="getPositions()">
+
+
+    <!-- NAV -->
+
+
+    <div id="Burger">
+
+        <div id="BurgerDesktop" onclick="menuBurgerDesktop()">
+            <div class="trait" id="Trait1"></div>
+            <div class="trait" id="Trait2"></div>
+            <div class="trait" id="Trait3"></div>
+        </div>
+    </div>
+
+    <nav class="navBar">
+
+        <div class="picto">
+            <div id="picto1" class="socialSquare"></div>
+            <div id="picto2" class="socialSquare"></div>
+            <div id="picto3" class="socialSquare"></div>
+            <div id="picto4" class="socialSquare"></div>
+        </div>
+
+    </nav>
+
+    <div class="menuBurger">
+        <div class="menuProjets">
+            <ul>
+                <li>
+                    <a href="index.html#space" onclick="menuBurgerDesktop()">L'espace</a>
+                </li>
+
+                <li>
+                    <a href="index.html#sky" onclick="menuBurgerDesktop()">Le ciel</a>
+                </li>
+
+                <li>
+                    <a href="index.html#city" onclick="menuBurgerDesktop()">La ville</a>
+                </li>
+
+                <li>
+                    <a href="index.html#forest" onclick="menuBurgerDesktop()">La forêt</a>
+                </li>
+
+                <li>
+                    <a href="index.html#beach" onclick="menuBurgerDesktop()">La plage</a>
+                </li>
+
+                <li>
+                    <a href="index.html#ocean" onclick="menuBurgerDesktop()">L'océan</a>
+                </li>
+            </ul>
+        </div>
+        <div class="menuLinks">
+            <ul>
+
+
+                <li>
+                    <a href="index.html" onclick="menuBurgerDesktop()">Accueil </a>
+                </li>
+
+                <li>
+                    <a href="blog.html" onclick="menuBurgerDesktop()">Actualités </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="menuBurgerDesktop()">Kit de presse</a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="menuBurgerDesktop()">Nous contacter</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    </nav>
+
+    <header>
+
+    </header>
+
+    <section id="space">
+        <div class="partOne">IMG</div>
+        <div class="partTwo">TXT</div>
+    </section>
+
+    <section id="sky">
+        <div class="partTwo">TXT</div>
+        <div class="partOne">IMG</div>
+    </section>
+
+    <section id="city">
+        <div class="partOne">IMG</div>
+        <div class="partTwo"></div>
+    </section>
+
+    <section id="forest">
+        <div class="partTwo">TXT</div>
+        <div class="partOne">IMG</div>
+    </section>
+
+    <section id="beach">
+        <div class="partOne">IMG</div>
+        <div class="partTwo">TXT</div>
+    </section>
+
+    <section id="ocean">
+        <div class="partTwo">TXT</div>
+        <div class="partOne">IMG</div>
+    </section>
+
+    <footer>
+        <div id="foot1">LINKS</div>
+        <div id="foot2">PARTNERS</div>
+        <div id="foot3">SOCIALS</div>
+    </footer>
+
+
+</body>
+
+</html>
