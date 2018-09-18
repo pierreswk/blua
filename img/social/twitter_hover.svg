@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>twitter_hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="twitter_hover" transform="translate(1.000000, 1.000000)" fill-rule="nonzero">
+            <circle id="Oval-1" stroke="#FF5B6D" stroke-width="0.5" fill="#FF5B6D" cx="10" cy="10" r="10"></circle>
+            <path d="M14.6,6.2 C14.3,6.4 13.7,6.6 13.4,6.6 C13,6.2 12.5,6 11.9,6 C10.8,6 9.9,6.9 9.9,8 C9.9,8.2 9.9,8.3 10,8.4 C8.5,8.4 6.9,7.6 5.9,6.3 C5.2,7.4 5.7,8.6 6.4,9 C6.2,9 5.7,9 5.5,8.8 C5.5,9.5 5.8,10.4 7,10.8 C6.8,10.9 6.3,10.9 6.2,10.9 C6.3,11.5 7.1,12.3 8,12.3 C7.7,12.7 6.5,13.3 5.1,13.1 C6,13.7 7.1,14 8.2,14 C11.4,14 13.9,11.4 13.8,8.1 C13.8,8.1 13.8,8.1 13.8,8.1 C13.8,8.1 13.8,8.1 13.8,8.1 C13.8,8.1 13.8,8.1 13.8,8.1 C14.1,7.9 14.5,7.5 14.8,7.1 C14.6,7.2 14.1,7.4 13.7,7.4 C14,7.1 14.5,6.6 14.6,6.2" id="Fill-1" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

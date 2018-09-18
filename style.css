@@ -177,6 +177,100 @@
             align-items: center;
         }
 
+        nav {
+            width: 100%;
+            height: 80px;
+            margin: auto;
+            position: absolute;
+        }
+        
+        @keyframes Slide {
+            0% {
+                transform: translateY(0%);
+                opacity: 0;
+            }
+        
+            90% {
+                transform: translateY(60%)
+            }
+        
+            100% {
+                transform: translateY(50%);
+                opacity: 1;
+            }
+        }
+
+        .picto {
+            height: 8em;
+            width: 20em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: -35px auto;
+        }
+        
+        #picto1 {
+            background-image: url("img/social/facebook.svg");
+            opacity: 0;
+            width: 3em;
+            height: 3em;
+            animation: 150ms ease-in 1s 1 forwards Slide;
+        }
+        
+        #picto1:hover {
+            background-image: url("img/social/facebook_hover.svg");
+            cursor: pointer;
+        
+        }
+        
+        #picto2 {
+            background-image: url("img/social/insta.svg");
+            opacity: 0;
+            animation: 150ms ease-in 1.10s 1 forwards Slide;
+            width: 3em;
+            height: 3em;
+        }
+        
+        #picto2:hover {
+            background-image: url("img/social/insta_hover.svg");
+            cursor: pointer;
+        }
+        
+        #picto3 {
+            background-image: url("img/social/twitter.svg");
+            opacity: 0;
+            animation: 150ms ease-in 1.20s 1 forwards Slide;
+            width: 3em;
+            height: 3em;
+        }
+        
+        #picto3:hover {
+            background-image: url("img/social/twitter_hover.svg");
+            cursor: pointer;
+        }
+        
+        
+        #picto4 {
+            background-image: url("img/social/youtube.svg");
+            opacity: 0;
+            animation: 150ms ease-in 1.30s 1 forwards Slide;
+            width: 3em;
+            height: 3em;
+        }
+        
+        #picto4:hover {
+            background-image: url("img/social/youtube_hover.svg");
+            cursor: pointer;
+        }
+        
+        .socialSquare {
+            width: 2em;
+            height: 2em;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
         .partOne {
             width: 35%;
             height: 80%;
