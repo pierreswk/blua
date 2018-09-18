@@ -1,5 +1,15 @@
 /* GLOBAL */
 
+@font-face {
+    font-family: "Avenir-Book";
+    src: url("fonts/Avenir-Book.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Mikado";
+    src: url("fonts/mikado-black.otf") format("opentype");
+}
+
 h1 {
     font-family: 'Mikado';
     color: white;
